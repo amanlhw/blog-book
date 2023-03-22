@@ -2,9 +2,9 @@
 #  Your basic info
 # ---------------------------------------------------------------------------------------
 base_info:
-  title: 叮咚 # Site title
+  title: 叮咚の博客 # Site title
   author: 叮咚 # Author name
-  url: https://redefine.ohevan.com # Site url
+  url: https://amanlhw.github.io/blog-book/ # Site url
   # Logo image (You can use local image, image external link or don’t fill)
   logo_img: # logo image on the left of the navigation bar
 
@@ -16,10 +16,10 @@ style:
   primary_color: "#005080"
 
   # Avatar (You can use local image or image external link)
-  avatar: /images/avatar.jpeg # avatar of the author
+  avatar: https://iconfont.alicdn.com/p/avatar/6ysIeM30bNwA.jpeg # avatar of the author
 
   # Favicon (You can use local image or image external link)
-  favicon: /images/redefine-favicon.svg # favicon of the site
+  favicon: https://img.alicdn.com/imgextra/i4/O1CN01XZe8pH1USpiUNT1QN_!!6000000002517-2-tps-114-114.png # favicon of the site
   og_image: # og:image of the site
     enable: false
     image_url: # image url
@@ -60,7 +60,7 @@ style:
     title: 叮咚 # the title in the middle of the first screen. HTML supported (e.g. svg html code of your logo)
     subtitle: 
       enable: true
-      list: ['叮咚的博客','有些了一句']
+      list: ['叮咚の博客',"console.log('hello world')"]
     custom_font: # custom font for the first screen
       enable: false
       font_family: # the font family name of the url below
@@ -71,7 +71,7 @@ style:
     progress_bar: # reading progress bar
       enable: true 
     percent: # reading progress percent
-      enable: false
+      enable: true
 
 # ---------------------------------------------------------------------------------------
 # Custom Settings
@@ -96,9 +96,9 @@ custom:
 # Social contact link
 # ---------------------------------------------------------------------------------------
 social_contact: # social contact icons in the first screen, you can add more by using fontawesome icon names
-  enable: false 
+  enable: true 
   links:
-    github:  # your GitHub URL
+    github: https://github.com/amanlhw/ # your GitHub URL
     instagram: # your Instagram URL
     zhihu:  # your ZhiHu URL
     twitter:  # your twitter URL
@@ -112,25 +112,28 @@ menu: #you can customize, i18n files are in the theme's languages folder. fa-reg
   Home: 
     path: / 
     icon: fa-regular fa-house # can be empty
-  # Archives: 
-  #   path: /archives 
+  Archives: 
+    path: /archives 
+    icon: fa-regular fa-archive # can be empty
+  # Categories: 
+  #   path: /categories 
   #   icon: fa-regular fa-archive # can be empty
-  # Status: 
-  #   path: https://status.evanluo.top/
-  #   icon: fa-regular fa-chart-bar
-  # About: 
-  #   icon: fa-regular fa-user
-  #   submenus:
-  #     Me: /about
-  #     Github: https://github.com/EvanNotFound/hexo-theme-redefine
-  #     Blog: https://ohevan.com
-  #     Friends: /friends
-  # Links: 
-  #   icon: fa-regular fa-link
-  #   submenus:
-  #     Link1: /link1
-  #     Link2: /link2
-  #     Link3: /link3
+  Status: 
+    path: https://status.evanluo.top/
+    icon: fa-regular fa-chart-bar
+  About: 
+    icon: fa-regular fa-user
+    submenus:
+      Me: /about
+      Github: https://github.com/EvanNotFound/hexo-theme-redefine
+      Blog: https://ohevan.com
+      Friends: /friends
+  Links: 
+    icon: fa-regular fa-link
+    submenus:
+      Link1: /link1
+      Link2: /link2
+      Link3: /link3
 
   # ...... # you can add more
 
@@ -163,7 +166,7 @@ post:
   # Author label
   author_label:
     enable: true
-    auto: false # if true, show Lv1, Lv2, Lv3... , If false, show custom label
+    auto: true # if true, show Lv1, Lv2, Lv3... , If false, show custom label
     # label array item can be one or more
     custom_label_list: ["lol"]
 
@@ -197,7 +200,7 @@ toc:
 # Post copyright info
 # ---------------------------------------------------------------------------------------
 copyright_info:
-  enable: true
+  enable: false
 
 # ---------------------------------------------------------------------------------------
 # Website count
@@ -217,7 +220,7 @@ website_count:
 # See: https://github.com/theme-next/hexo-generator-searchdb
 # ---------------------------------------------------------------------------------------
 local_search:
-  enable: false
+  enable: true
   preload: true # Preload the search data when the page loads
 
 # ---------------------------------------------------------------------------------------
@@ -299,7 +302,7 @@ recommended_article: # 文章推荐，需要 npm install nodejieba
   title: 推荐阅读
   icon: fa-solid fa-bookmark
   max_count: 3
-  placeholder_img: /images/wallhaven-wqery6-light.webp
+  placeholder_img: https://evan.beee.top/img/wallhaven-wqery6-light.webp
   # 不展示文章推荐：
   # front-matter 使用 skip_recommended_article: true 关闭
   # 不在以下文件夹文章中展示文章推荐 根目录是source/
@@ -321,7 +324,7 @@ fontawesome: # select fontawesome versions you want to use, in order to reduce t
 footer:
   runtime: true # show website running time or not
   icon: '<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>' # footer icon, write fontawesome html code here
-  start_time: 2022/8/17 11:45:14 # the starting time of your website, format: yyyy/mm/dd hh:mm:ss
+  start_time: 2023/3/22 16:16:16 # the starting time of your website, format: yyyy/mm/dd hh:mm:ss
   customize:  # customize footer message, can be html code
   icp: # ICP record number of your website, Can be null
     enable: false
@@ -365,3 +368,11 @@ plugins:
 # Github: https://github.com/EvanNotFound/hexo-theme-redefine
 # ---------------------------------------------------------------------------------------
 version: 1.2.3 #DELETE THIS LINE IN YOUR _config.redefine.yml
+
+# Search
+## See: https://github.com/theme-next/hexo-generator-searchdb
+search:
+  path: search.json
+  field: post
+  content: true
+  format: striptags
