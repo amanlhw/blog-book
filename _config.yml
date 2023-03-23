@@ -6,7 +6,7 @@
 title: 叮咚
 subtitle: '这是副标题'
 description: '这是一段很长很长很长的描述'
-keywords: '关键词1,关键词2'
+keywords: '博客,叮咚'
 author: lhw
 language: zh-CN
 timezone: ''
@@ -103,4 +103,6 @@ theme: redefine
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/amanlhw/blog-book.git
+  branch: master
