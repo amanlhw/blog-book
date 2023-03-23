@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 叮咚
-subtitle: '这是副标题'
-description: '这是一段很长很长很长的描述'
+title: 叮咚の博客
+subtitle: '叮咚的学习记录'
+description: '叮咚的学习记录'
 keywords: '博客,叮咚'
 author: lhw
 language: zh-CN
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://amanlhw.github.io/blog-book/
+url: https://amanlhw.github.io/blog-book
 root: /blog-book/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -105,4 +105,4 @@ theme: redefine
 deploy:
   type: git
   repo: https://github.com/amanlhw/blog-book.git
-  branch: master
+  branch: gh-pages
