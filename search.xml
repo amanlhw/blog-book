@@ -25,14 +25,71 @@
       </tags>
   </entry>
   <entry>
-    <title>新增测试</title>
-    <url>/blog-book/2023/03/23/%E6%96%B0%E5%A2%9E%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<h2 id="这是一篇测试文档"><a href="#这是一篇测试文档" class="headerlink" title="这是一篇测试文档"></a>这是一篇测试文档</h2>]]></content>
+    <title>模板</title>
+    <url>/blog-book/2023/03/23/%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<h3 id="大号提示块"><a href="#大号提示块" class="headerlink" title="大号提示块"></a>大号提示块</h3><div class="note-large notel-blue"><div class="notel-title"><p>提示</p>
+</div><div class="notel-content"><p>换行测试<br>换行测试<br>换行测试</p>
+ </div></div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% notel [颜色] [标题] %&#125;</span><br><span class="line">内容</span><br><span class="line">支持换行</span><br><span class="line">&#123;% endnotel %&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="小号提示块"><a href="#小号提示块" class="headerlink" title="小号提示块"></a>小号提示块</h3><div class="note note-red icon-padding"><i class="note-icon fa-solid fa-bolt"></i><p>自定义提示块标签</p>
+</div>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note [样式/颜色] [可选: 自定义图标] %&#125;</span><br><span class="line">笔记内容</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>[样式/颜色]</code> 可以为 <code>success</code> <code>default</code> <code>primary</code> <code>info</code> <code>warning</code> <code>danger</code> <code>tip</code> <code>question</code> 以及 <code>blue</code> <code>red</code> 等颜色</li>
+<li><code>[可选: 自定义图标]</code> 选项可选，请填写 Fontawsome 的图标名称后半部分，比如 <code>fa-image</code></li>
+</ul>
+<h3 id="按钮"><a href="#按钮" class="headerlink" title="按钮"></a>按钮</h3><a class="button  center large" href='https://baidu.com' title='百度一下'><i class='fa-solid fa-download'></i> 百度一下</a>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% btn [可选大小]::[名称]::[url]::[可选图标] %&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li><code>可选大小</code>可以为<code>center</code> <code>regular</code> <code>large</code> <code>center large</code> <code>center regular</code></li>
+</ul>
+<h3 id="折叠"><a href="#折叠" class="headerlink" title="折叠"></a>折叠</h3><div class="note note-tip icon-padding"><i class="note-icon fa-solid fa-lightbulb"></i><p>tip 提示块标签</p>
+</div>
+
+
+
+<details class="blue"><summary><i class="fa-solid fa-chevron-right"></i>Folding 测试： 点击查看更多 </summary>
+              <div class='content'>
+              <p>啊啊啊啊啊</p><div class="note note-danger icon-padding"><i class="note-icon fa-solid fa-times-circle"></i><p>danger 提示块标签</p></div><div class="note note-tip icon-padding"><i class="note-icon fa-solid fa-lightbulb"></i><p>tip 提示块标签</p></div>
+              </div>
+            </details>
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% folding [颜色]::[标题] %&#125;</span><br><span class="line"></span><br><span class="line">需要写的内容</span><br><span class="line"></span><br><span class="line">&#123;% endfolding %&#125;</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>颜色列表：<code>yellow</code> <code>blue</code> <code>green</code> <code>red</code> <code>orange</code> <code>pink</code> <code>cyan</code> <code>white</code> <code>black</code> <code>gray</code></li>
+</ul>
+<h3 id="Tabs"><a href="#Tabs" class="headerlink" title="Tabs"></a>Tabs</h3><div class="tabs" id="tab-first-unique-name"><ul class="nav-tabs"><li class="tab active"><a class="#first-unique-name-1">First Tab</a></li><li class="tab"><a class="#first-unique-name-2">Second Tab</a></li><li class="tab"><a class="#first-unique-name-3">Third Tab</a></li></ul><div class="tab-content"><div class="tab-pane active" id="first-unique-name-1"><p><strong>This is Tab 1.</strong></p></div><div class="tab-pane" id="first-unique-name-2"><p><strong>This is Tab 2.</strong></p>
+<p>This is Tab 2.</p></div><div class="tab-pane" id="first-unique-name-3"><p><strong>This is Tab 3.</strong></p>
+<p>This is Tab 3.</p>
+<p>This is Tab 3.</p></div></div></div>
+
+
+
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% tabs 页面内不重复的ID %&#125;</span><br><span class="line">&lt;!-- tab 栏目1名称 --&gt;</span><br><span class="line">内容</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab 栏目2名称 --&gt;</span><br><span class="line">内容</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+
+
+
+
+<p><a class="link"   href="https://redefine.ohevan.com/2022/10/02/theme-demo/" >参考 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
       <categories>
-        <category>测试</category>
+        <category>模板</category>
       </categories>
       <tags>
-        <tag>测试</tag>
+        <tag>模板</tag>
       </tags>
   </entry>
 </search>
